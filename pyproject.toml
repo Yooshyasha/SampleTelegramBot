@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sampletelegrambot"
+version = "0.1"
+description = ""
+authors = ["Yooshyasha <maksimmorozov962@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tortoise-orm = {extras = ["asyncodbc"], version = "^0.21.5"}
+y24fw = {git = "https://github.com/Yooshyasha/y24FW.git"}
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+
+
+[tool.poetry.scripts]
+main = "sampletelegrambot.main:start"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
