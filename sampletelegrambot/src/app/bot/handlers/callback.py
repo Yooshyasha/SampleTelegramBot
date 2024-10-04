@@ -3,7 +3,7 @@ from aiogram.types import CallbackQuery
 from aiogram.filters import StateFilter
 from aiogram.filters.callback_data import CallbackData
 
-from ...database.models import User
+from sampletelegrambot.src.app.database.models import User
 
 
 callback_router = Router()
