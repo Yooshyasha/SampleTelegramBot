@@ -2,13 +2,12 @@
 name = "sampletelegrambot"
 version = "0.1"
 description = ""
-authors = ["Yooshyasha <maksimmorozov962@gmail.com>"]
+authors = ["Yooshyasha <mejzikrejzi66@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 tortoise-orm = {extras = ["asyncodbc"], version = "^0.21.5"}
-y24fw = {git = "https://github.com/Yooshyasha/y24FW.git"}
 aerich = "^0.7.2"
 loguru = "^0.7.2"
 

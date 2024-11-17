@@ -10,4 +10,4 @@ reply_router = Router()
 
 @reply_router.message(CommandStart())
 async def start_reply(message: Message):
-    await message.answer(text=JsonAnswer.get("start"))
+    await message.answer(text=await JsonAnswer.get("start"))

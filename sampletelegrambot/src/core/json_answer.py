@@ -9,7 +9,7 @@ class JsonAnswer:
     async def get(*tree: str) -> Optional[str]:
         try:
             async with aiofiles.open("data/answers.json") as file:
-                data = json.load(file)
+                data = json.loads(await file.read())
                 for name in tree:
                     data = data.get(name)
                     if data is None:
