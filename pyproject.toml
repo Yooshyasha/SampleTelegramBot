@@ -10,6 +10,7 @@ python = "^3.11"
 tortoise-orm = {extras = ["asyncodbc"], version = "^0.21.5"}
 y24fw = {git = "https://github.com/Yooshyasha/y24FW.git"}
 aerich = "^0.7.2"
+loguru = "^0.7.2"
 
 
 [tool.poetry.dev-dependencies]
