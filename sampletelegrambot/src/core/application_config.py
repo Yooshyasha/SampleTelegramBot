@@ -14,7 +14,7 @@ TORTOISE_ORM = {
 class Config:
     SECTION = "DEFAULT"
 
-    config = ConfigParser()
-    config.read("data/config.ini")
+    config_parser = ConfigParser()
+    config_parser.read("data/config.ini")
 
-    bot_token = config.get(SECTION, "bot_token")
+    bot_token = config_parser.get(SECTION, "bot_token")

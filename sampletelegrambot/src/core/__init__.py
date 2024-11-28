@@ -1,2 +1,4 @@
 from .logger import logger
-from .config import Config
+from .application_config import Config
+
+config = Config()

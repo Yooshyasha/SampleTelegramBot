@@ -3,7 +3,7 @@ import asyncio
 from tortoise import Tortoise
 
 from sampletelegrambot.src.app.bot.bot import start_pooling
-from sampletelegrambot.src.core.config import TORTOISE_ORM
+from sampletelegrambot.src.core.application_config import TORTOISE_ORM
 from sampletelegrambot.src.core import logger
 
 
