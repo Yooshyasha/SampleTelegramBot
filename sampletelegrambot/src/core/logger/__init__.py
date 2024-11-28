@@ -1,7 +1,7 @@
 import logging
-from .logger_impl import Logger
+from loguru import logger
 
-logger = Logger()
+# logger = Logger()  ToDo реализовать собственный класс логера
 
 logger.add("data/log/log_{time}.log", format="{time} {level} {message}", level="DEBUG")
 

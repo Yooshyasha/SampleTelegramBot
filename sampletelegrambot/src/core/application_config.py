@@ -11,7 +11,7 @@ TORTOISE_ORM = {
 }
 
 
-class Config:
+class ApplicationConfig:
     SECTION = "DEFAULT"
 
     config_parser = ConfigParser()

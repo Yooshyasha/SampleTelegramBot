@@ -5,7 +5,7 @@ from .handlers.reply import reply_router
 
 from .modules.middlewares import UserMiddleware
 
-from sampletelegrambot.src.core import logger, Config
+from sampletelegrambot.src.core import logger, ApplicationConfig
 
 
 async def start_pooling():
@@ -21,4 +21,4 @@ async def start_pooling():
 
     logger.info('Starting bot pooling...')
 
-    await dp.start_polling(Bot(token=Config().bot_token))
+    await dp.start_polling(Bot(token=ApplicationConfig().bot_token))
