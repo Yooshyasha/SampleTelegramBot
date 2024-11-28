@@ -5,6 +5,10 @@ from sampletelegrambot.src.core.utils import SingletonABCMeta
 
 class BaseService(ABC, metaclass=SingletonABCMeta):
     @abstractmethod
+    def __init__(self):
+        """Создание экземпляра сервиса"""
+
+    @abstractmethod
     async def initialization(self):
         """
         Инициализирует сервис

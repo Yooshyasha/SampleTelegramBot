@@ -1,7 +1,13 @@
-from sampletelegrambot.src.app.bot.__init__ import start_pooling
+from typing_extensions import override
+
+from sampletelegrambot.src.app.bot import start_pooling
 from .base_service import BaseService
 
 class BotService(BaseService):
+    @override
+    def __init__(self): ...
+
+    @override
     async def initialization(self):
         """
         Запуск телеграм бота
@@ -9,4 +15,5 @@ class BotService(BaseService):
         """
         return await start_pooling()
 
+    @override
     async def destroy(self): return
