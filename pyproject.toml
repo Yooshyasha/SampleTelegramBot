@@ -1,23 +1,22 @@
 [tool.poetry]
 name = "sampletelegrambot"
 version = "0.1"
-description = ""
+description = "A sample sructure for a telegram bot"
 authors = ["Yooshyasha <mejzikrejzi66@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-tortoise-orm = {extras = ["asyncodbc"], version = "^0.21.5"}
-aerich = "^0.7.2"
+python = "^3.12"
+tortoise-orm = {extras = ["asyncodbc"], version = "^0.22.1"}
 loguru = "^0.7.2"
 
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.4.0"
+pytest = "^8.3.3"
 
 
 [tool.poetry.scripts]
-main = "sampletelegrambot.main:start"
+main = "sampletelegrambot.__main__:start"
 
 
 [build-system]
