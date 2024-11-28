@@ -1,16 +1,14 @@
 from aiogram import Bot, Dispatcher
 
+from sampletelegrambot.src.core import logger, config
 from .handlers.callback import callback_router
 from .handlers.reply import reply_router
-
 from .modules.middlewares import UserMiddleware
 
-from sampletelegrambot.src.core import logger, ApplicationConfig
-
+dp = Dispatcher()
+bot = Bot(token=config.bot_token)
 
 async def start_pooling():
-    dp = Dispatcher()
-
     dp.message.middleware(UserMiddleware())
     dp.callback_query.middleware(UserMiddleware())
 
@@ -21,4 +19,4 @@ async def start_pooling():
 
     logger.info('Starting bot pooling...')
 
-    await dp.start_polling(Bot(token=ApplicationConfig().bot_token))
+    await dp.start_polling(bot)

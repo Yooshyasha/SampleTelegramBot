@@ -22,3 +22,10 @@ class TaskManager:
     def get_tasks(self):
         """Возвращает список текущих задач."""
         return self._coroutines
+
+    async def shutdown(self):
+        """Останавливает все запущенные задачи."""
+        for task in self._coroutines:
+            task.cancel()
+        await asyncio.gather(*self._coroutines, return_exceptions=True)
+        print("All tasks canceled")
