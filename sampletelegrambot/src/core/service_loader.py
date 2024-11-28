@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional, List, Type
 from sampletelegrambot.src.core import logger
 
 from sampletelegrambot.src.core.tast_manager import TaskManager
@@ -10,18 +10,29 @@ class ServiceLoader(metaclass=SingletonMeta):
     _services: Optional[List[BaseService]] = []
     _is_initialized: bool = False
 
-    def load(self):
-        """Рекурсивно находим все подклассы BaseService"""
+    def load(self) -> None:
+        """
+        Загружает сервисы, создавая их экземпляр
+        :return: None
+        """
         self._services = [service() for service in self._get_all_subclasses(BaseService)]
 
-    def _get_all_subclasses(self, base_class):
+    def _get_all_subclasses(self, base_class) -> set[Type[BaseService]]:
+        """
+        Рекурсивно возвращает все дочерние классы
+        :param base_class: Класс, у которого ищутся все дочерние классы
+        :return:
+        """
         subclasses = set(base_class.__subclasses__())
         for subclass in subclasses.copy():
             subclasses.update(self._get_all_subclasses(subclass))
         return subclasses
 
-    def initialize(self):
-        """Инициализирует все сервисы через TaskManager."""
+    def initialize(self) -> None:
+        """
+        Инициализирует все сервисы через TaskManager
+        :return: None
+        """
         logger.debug("Запуск сервисов")
         if self._services is None:
             raise RuntimeError("Services are not loaded. Call 'load' first.")
@@ -32,9 +43,12 @@ class ServiceLoader(metaclass=SingletonMeta):
 
         self._is_initialized = True
 
-    def destroy(self):
+    def destroy(self) -> None:
+        """
+        Уничтожает все сервисы
+        :return: None
+        """
         logger.debug("Уничтожение сервисов")
-        """Останавливает все сервисы через TaskManager."""
         if self._services is None:
             raise RuntimeError("Services are not loaded. Call 'load' first.")
         elif not self._is_initialized:

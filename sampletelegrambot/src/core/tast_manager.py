@@ -28,4 +28,4 @@ class TaskManager:
         for task in self._coroutines:
             task.cancel()
         await asyncio.gather(*self._coroutines, return_exceptions=True)
-        print("All tasks canceled")
+        logger.debug("All tasks canceled")
