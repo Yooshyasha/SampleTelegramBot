@@ -1,4 +1,4 @@
-from sampletelegrambot.src.app.bot.bot import start_pooling
+from sampletelegrambot.src.app.bot.__init__ import start_pooling
 from .base_service import BaseService
 
 class BotService(BaseService):
