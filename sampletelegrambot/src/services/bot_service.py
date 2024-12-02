@@ -7,8 +7,8 @@ from ..core import logger
 
 
 class BotService(BaseService):
-    def __init__(self, user_service: UserService):
-        self.user_service = user_service
+    def __init__(self):
+        pass
 
     @override
     async def initialization(self):
@@ -16,7 +16,6 @@ class BotService(BaseService):
         Запуск телеграм бота
         :return:
         """
-        logger.debug(f"Пользователей бота: {len(await self.user_service.get_users())}")
         return await start_pooling()
 
     @override
