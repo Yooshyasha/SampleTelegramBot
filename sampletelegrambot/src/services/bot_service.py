@@ -1,7 +1,8 @@
 from typing_extensions import override
 
-from sampletelegrambot.src.app.bot import start_pooling
+from sampletelegrambot.src.app.bot import start_pooling, dp
 from .base_service import BaseService
+
 
 class BotService(BaseService):
     @override
@@ -16,4 +17,5 @@ class BotService(BaseService):
         return await start_pooling()
 
     @override
-    async def destroy(self): return
+    async def destroy(self):
+        await dp.stop_polling()

@@ -10,12 +10,13 @@ class ServiceLoader(metaclass=SingletonMeta):
     _services: Optional[List[BaseService]] = []
     _is_initialized: bool = False
 
-    def load(self) -> None:
+    def load(self) -> "ServiceLoader":
         """
         Загружает сервисы, создавая их экземпляр
         :return: None
         """
         self._services = [service() for service in self._get_all_subclasses(BaseService)]
+        return self
 
     def _get_all_subclasses(self, base_class) -> set[Type[BaseService]]:
         """
