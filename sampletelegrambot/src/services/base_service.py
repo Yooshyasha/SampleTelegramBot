@@ -5,8 +5,9 @@ from sampletelegrambot.src.core.utils import SingletonABCMeta
 
 class BaseService(ABC, metaclass=SingletonABCMeta):
     @abstractmethod
-    def __init__(self):
-        """Создание экземпляра сервиса"""
+    def __init__(self, *args, **kwargs) -> None:
+        """Создание экземпляра сервиса."""
+        raise NotImplementedError
 
     @abstractmethod
     async def initialization(self):
@@ -14,7 +15,7 @@ class BaseService(ABC, metaclass=SingletonABCMeta):
         Инициализирует сервис
         :return: None
         """
-        pass
+        raise NotImplementedError
 
     @abstractmethod
     async def destroy(self):
@@ -22,4 +23,4 @@ class BaseService(ABC, metaclass=SingletonABCMeta):
         Уничтожает сервис
         :return: None
         """
-        pass
+        raise NotImplementedError
