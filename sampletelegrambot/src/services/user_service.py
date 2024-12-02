@@ -7,8 +7,10 @@ from .base_service import BaseService
 class UserService(BaseService):
     """Сервис используемый для кэширования пользователей"""
 
+    _users_list: List[User] = []
+
     def __init__(self) -> None:
-        self._users_list: List[User] = []
+        pass
 
     async def initialization(self):
         self._users_list = await User.all()
