@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 tortoise-orm = {extras = ["asyncodbc"], version = "^0.22.1"}
 loguru = "^0.7.2"
+aiogram = "^3.15.0"
 
 
 [tool.poetry.dev-dependencies]
