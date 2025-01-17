@@ -35,6 +35,9 @@ class MyService(BaseService):
         print("MyService is destroyed")
 ```
 
+#### ВАЖНО: 
+   - Каждый новый сервис нужно обязательно прописать в `src/services/__init__`
+
 ### Как использовать сервисы
 
 1. **Автоматическая загрузка сервисов**:
@@ -47,8 +50,16 @@ from sampletelegrambot.src.core.service_loader import ServiceLoader
 service_loader = ServiceLoader()
 service_loader.load()
 ```
+2. **Получение экземпляра сервиса**:
+   - Для того, что бы получить экземпляр сервиса (напомню, что каждый сервис - Singleton) - вам нужно использовать ``.get_instance``
 
-2. **Автоматическая инициализация сервисов**:
+ ```python
+from sampletelegrambot.src.services.my_service import MyService
+
+my_service = MyService.get_instance()
+```
+
+3. **Автоматическая инициализация сервисов**:
     - Для инициализации сервисов достаточно вызвать метод `initialize`. Это автоматически запустит инициализацию для каждого загруженного сервиса.
 
 ```python
@@ -56,7 +67,7 @@ service_loader.load()
 service_loader.initialize()
 ```
 
-3. **Автоматическое уничтожение сервисов**:
+4. **Автоматическое уничтожение сервисов**:
     - Все сервисы будут автоматически уничтожены при завершении работы приложения. Вы можете вызвать метод `destroy` в случае, если необходимо вручную остановить сервисы.
 
 ```python
