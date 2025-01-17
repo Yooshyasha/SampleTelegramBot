@@ -1,9 +1,9 @@
 from typing import Callable, Awaitable, Any, Dict
 
 from aiogram import BaseMiddleware
-from aiogram.types import Message, CallbackQuery, TelegramObject
+from aiogram.types import TelegramObject
 
-from ...database.models import User
+from sampletelegrambot.src.database.models import User
 
 
 class UserMiddleware(BaseMiddleware):

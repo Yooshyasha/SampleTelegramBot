@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import MagicMock
 from sampletelegrambot.src.services.user_service import UserService
-from sampletelegrambot.src.app.database.models import User
+from sampletelegrambot.src.database.models import User
 
 @pytest.fixture
 def user_service():

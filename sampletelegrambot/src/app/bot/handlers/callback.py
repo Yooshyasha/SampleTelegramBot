@@ -1,10 +1,4 @@
-from aiogram import Router, F
-from aiogram.types import CallbackQuery
-from aiogram.filters import StateFilter
-from aiogram.filters.callback_data import CallbackData
-
-from sampletelegrambot.src.app.database.models import User
-
+from aiogram import Router
 
 callback_router = Router()
 
