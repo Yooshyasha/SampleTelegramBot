@@ -1,6 +1,7 @@
 import asyncio
 import signal
 import traceback
+from asyncio import InvalidStateError
 from types import FrameType
 from typing import Optional
 
@@ -31,6 +32,14 @@ class Application:
         """Мониторинг задач."""
         logger.debug("Мониторинг задач запущен")
         while not self.stop_event.is_set():
+            tasks = self.task_manager.get_tasks()
+
+            for task in tasks:
+                try:
+                    if task.exception():
+                        logger.error(traceback.format_exception(task.exception()))
+                except InvalidStateError:
+                    pass
             await asyncio.sleep(1)
         logger.debug("Мониторинг завершён.")
         await self.graceful_shutdown()
