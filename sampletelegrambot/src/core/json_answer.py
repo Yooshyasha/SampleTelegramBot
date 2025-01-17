@@ -8,7 +8,7 @@ class JsonAnswer:
     @staticmethod
     async def get(*tree: str) -> Optional[str]:
         try:
-            async with aiofiles.open("data/answers.json") as file:
+            async with aiofiles.open("data/answers.json", encoding="utf-8") as file:
                 data = json.loads(await file.read())
                 for name in tree:
                     data = data.get(name)
@@ -19,3 +19,8 @@ class JsonAnswer:
         except (FileNotFoundError, json.JSONDecodeError):
             return None
         return None
+
+class SuppleJsonAnswer(JsonAnswer):
+    @staticmethod
+    async def get(*tree: str) -> str:
+        return super().get(*tree) or str(tree)
