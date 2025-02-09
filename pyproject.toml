@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "EDITTHIS"
-version = "0.5"
+version = "1.0"
 description = "A sample sructure for a telegram bot"
 authors = ["Yooshyasha <mejzikrejzi66@gmail.com>"]
 readme = "README.md"
