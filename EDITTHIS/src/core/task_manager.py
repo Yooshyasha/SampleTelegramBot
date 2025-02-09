@@ -1,7 +1,7 @@
 import asyncio
 from typing import List, Coroutine
 
-from sampletelegrambot.src.core import logger
+from EDITTHIS.src.core import logger
 
 
 class TaskManager:

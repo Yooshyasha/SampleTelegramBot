@@ -2,7 +2,7 @@ import asyncio
 
 import pytest
 
-from sampletelegrambot.src.core.service_loader import ServiceLoader
+from EDITTHIS.src.core.service_loader import ServiceLoader
 
 
 @pytest.fixture

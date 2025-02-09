@@ -1,6 +1,6 @@
 from typing_extensions import override
 
-from sampletelegrambot.src.app.bot import start_pooling, dp
+from EDITTHIS.src.app.bot import start_pooling, dp
 from .base_service import BaseService
 
 

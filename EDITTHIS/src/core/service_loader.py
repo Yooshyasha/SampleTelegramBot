@@ -1,10 +1,10 @@
 import inspect
 from typing import Type, Dict
 
-from sampletelegrambot.src.core import logger
-from sampletelegrambot.src.core.task_manager import TaskManager
-from sampletelegrambot.src.core.utils import SingletonMeta
-from sampletelegrambot.src.services.base_service import BaseService
+from EDITTHIS.src.core import logger
+from EDITTHIS.src.core.task_manager import TaskManager
+from EDITTHIS.src.core.utils import SingletonMeta
+from EDITTHIS.src.services.base_service import BaseService
 
 
 class ServiceLoader(metaclass=SingletonMeta):

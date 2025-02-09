@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from sampletelegrambot.src.core.utils import SingletonABCMeta
+from EDITTHIS.src.core.utils import SingletonABCMeta
 
 
 class BaseService(ABC, metaclass=SingletonABCMeta):

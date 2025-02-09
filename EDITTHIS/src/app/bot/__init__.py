@@ -1,6 +1,6 @@
 from aiogram import Bot, Dispatcher
 
-from sampletelegrambot.src.core import logger, config
+from EDITTHIS.src.core import logger, config
 from .handlers.reply import reply_router
 from .modules.middlewares import UserMiddleware
 

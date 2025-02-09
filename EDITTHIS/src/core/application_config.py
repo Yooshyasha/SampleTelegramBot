@@ -4,7 +4,7 @@ TORTOISE_ORM = {
     "connections": {"default": "sqlite://data/db.sqlite3"},
     "apps": {
         "models": {
-            "models": ["sampletelegrambot.src.database.models"],
+            "models": ["EDITTHIS.src.database.models"],
             "default_connection": "default",
         },
     },

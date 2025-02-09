@@ -7,10 +7,10 @@ from typing import Optional
 
 from tortoise import Tortoise
 
-from sampletelegrambot.src.core import logger, config
-from sampletelegrambot.src.core.application_config import TORTOISE_ORM
-from sampletelegrambot.src.core.service_loader import ServiceLoader
-from sampletelegrambot.src.core.task_manager import TaskManager
+from EDITTHIS.src.core import logger, config
+from EDITTHIS.src.core.application_config import TORTOISE_ORM
+from EDITTHIS.src.core.service_loader import ServiceLoader
+from EDITTHIS.src.core.task_manager import TaskManager
 
 
 class Application:

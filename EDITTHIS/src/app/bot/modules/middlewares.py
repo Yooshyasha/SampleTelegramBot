@@ -3,7 +3,7 @@ from typing import Callable, Awaitable, Any, Dict
 from aiogram import BaseMiddleware
 from aiogram.types import TelegramObject
 
-from sampletelegrambot.src.database.models import User
+from EDITTHIS.src.database.models import User
 
 
 class UserMiddleware(BaseMiddleware):

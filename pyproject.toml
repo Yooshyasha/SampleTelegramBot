@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "sampletelegrambot"
+name = "EDITTHIS"
 version = "0.5"
 description = "A sample sructure for a telegram bot"
 authors = ["Yooshyasha <mejzikrejzi66@gmail.com>"]
@@ -17,7 +17,7 @@ pytest = "^8.3.3"
 
 
 [tool.poetry.scripts]
-main = "sampletelegrambot.__main__:start"
+main = "EDITTHIS.__main__:start"
 
 
 [build-system]

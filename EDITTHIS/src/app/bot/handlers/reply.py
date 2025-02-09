@@ -2,7 +2,7 @@ from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import CommandStart
 
-from sampletelegrambot.src.core.json_answer import JsonAnswer
+from EDITTHIS.src.core.json_answer import JsonAnswer
 
 reply_router = Router()
 

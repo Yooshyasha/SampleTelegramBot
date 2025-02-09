@@ -1,6 +1,6 @@
 from typing import List
 
-from sampletelegrambot.src.database.models import User
+from EDITTHIS.src.database.models import User
 from .base_service import BaseService
 
 

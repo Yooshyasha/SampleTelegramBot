@@ -23,16 +23,17 @@
 Пример:
 
 ```python
-from sampletelegrambot.src.services.base_service import BaseService
+from EDITTHIS.src.services.base_service import BaseService
+
 
 class MyService(BaseService):
-    def initialization(self):
-        # Логика инициализации
-        print("MyService is initialized")
-    
-    def destroy(self):
-        # Логика уничтожения
-        print("MyService is destroyed")
+   def initialization(self):
+      # Логика инициализации
+      print("MyService is initialized")
+
+   def destroy(self):
+      # Логика уничтожения
+      print("MyService is destroyed")
 ```
 
 #### ВАЖНО: 
@@ -44,7 +45,7 @@ class MyService(BaseService):
     - Все сервисы загружаются автоматически при вызове метода `load` в классе `ServiceLoader`. Этот метод рекурсивно находит все классы, наследующие от `BaseService`, и автоматически создаёт их экземпляры.
 
 ```python
-from sampletelegrambot.src.core.service_loader import ServiceLoader
+from EDITTHIS.src.core.service_loader import ServiceLoader
 
 # Загрузите все сервисы (этот шаг выполняется автоматически при запуске приложения)
 service_loader = ServiceLoader()
@@ -54,7 +55,7 @@ service_loader.load()
    - Для того, что бы получить экземпляр сервиса (напомню, что каждый сервис - Singleton) - вам нужно использовать ``.get_instance``
 
  ```python
-from sampletelegrambot.src.services.my_service import MyService
+from EDITTHIS.src.services.my_service import MyService
 
 my_service = MyService.get_instance()
 ```
