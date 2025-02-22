@@ -1,3 +1,7 @@
+"""Copyright (c) 2025, Yooshyasha
+BSD 3-Clause License
+All rights reserved."""
+
 from typing_extensions import override
 
 from EDITTHIS.src.app.bot import start_pooling, dp

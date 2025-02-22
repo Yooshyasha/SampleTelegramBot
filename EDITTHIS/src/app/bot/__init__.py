@@ -1,3 +1,7 @@
+"""Copyright (c) 2025, Yooshyasha
+BSD 3-Clause License
+All rights reserved."""
+
 from aiogram import Bot, Dispatcher
 
 from EDITTHIS.src.core import logger, config

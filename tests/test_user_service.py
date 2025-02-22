@@ -1,3 +1,7 @@
+"""Copyright (c) 2025, Yooshyasha
+BSD 3-Clause License
+All rights reserved."""
+
 import pytest
 from unittest.mock import MagicMock
 from EDITTHIS.src.services.user_service import UserService

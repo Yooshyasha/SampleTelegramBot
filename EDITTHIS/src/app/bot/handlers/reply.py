@@ -1,3 +1,7 @@
+"""Copyright (c) 2025, Yooshyasha
+BSD 3-Clause License
+All rights reserved."""
+
 from aiogram import Router
 from aiogram.types import Message
 from aiogram.filters import CommandStart

@@ -1,3 +1,7 @@
+"""Copyright (c) 2025, Yooshyasha
+BSD 3-Clause License
+All rights reserved."""
+
 from typing import Callable, Awaitable, Any, Dict
 
 from aiogram import BaseMiddleware
