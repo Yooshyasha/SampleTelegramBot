@@ -5,7 +5,7 @@ All rights reserved."""
 import asyncio
 from typing import List, Coroutine
 
-from EDITTHIS.src.core import logger
+from avitoworkerservice.src.core import logger
 
 
 class TaskManager:

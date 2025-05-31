@@ -4,8 +4,8 @@ All rights reserved."""
 
 import pytest
 from unittest.mock import MagicMock
-from EDITTHIS.src.services.user_service import UserService
-from EDITTHIS.src.database.models import User
+from avitoworkerservice.src.services.user_service import UserService
+from avitoworkerservice.src.database.models import User
 
 @pytest.fixture
 def user_service():

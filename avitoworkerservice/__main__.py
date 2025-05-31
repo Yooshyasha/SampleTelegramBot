@@ -11,10 +11,9 @@ from typing import Optional
 
 from tortoise import Tortoise
 
-from EDITTHIS.src.core import logger, config
-from EDITTHIS.src.core.application_config import TORTOISE_ORM
-from EDITTHIS.src.core.service_loader import ServiceLoader
-from EDITTHIS.src.core.task_manager import TaskManager
+from avitoworkerservice.src.core import logger, config
+from avitoworkerservice.src.core.service_loader import ServiceLoader
+from avitoworkerservice.src.core.task_manager import TaskManager
 
 
 class Application:
@@ -58,7 +57,7 @@ class Application:
             logger.error(f"Ошибка при уничтожении сервисов: {traceback.format_exc()}")
         finally:
             await self.task_manager.shutdown()
-            await Tortoise.close_connections()
+            # await Tortoise.close_connections()
             logger.info("Приложение успешно завершено.")
 
 
@@ -67,9 +66,9 @@ async def main():
     logger.info("Запуск приложения...")
 
     # Инициализация базы данных
-    await Tortoise.init(config=TORTOISE_ORM)
-    await Tortoise.generate_schemas()
-    logger.info("База данных инициализирована.")
+    # await Tortoise.init(config=TORTOISE_ORM)
+    # await Tortoise.generate_schemas()
+    # logger.info("База данных инициализирована.")
 
     app.loader.load().initialize()
     app.setup_signal_handlers()

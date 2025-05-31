@@ -4,7 +4,7 @@ All rights reserved."""
 
 from abc import abstractmethod
 
-from EDITTHIS.src.core.utils import SingletonABCMeta
+from avitoworkerservice.src.core.utils import SingletonABCMeta
 
 
 class BaseAPIProvider(metaclass=SingletonABCMeta):
