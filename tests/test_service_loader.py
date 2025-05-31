@@ -6,7 +6,7 @@ import asyncio
 
 import pytest
 
-from avitoworkerservice.src.core.service_loader import ServiceLoader
+from EDITTHIS.src.core.service_loader import ServiceLoader
 
 
 @pytest.fixture

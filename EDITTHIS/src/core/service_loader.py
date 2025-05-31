@@ -5,10 +5,10 @@ All rights reserved."""
 import inspect
 from typing import Type, Dict
 
-from avitoworkerservice.src.core import logger
-from avitoworkerservice.src.core.task_manager import TaskManager
-from avitoworkerservice.src.core.utils import SingletonMeta
-from avitoworkerservice.src.services.base_service import BaseService
+from EDITTHIS.src.core import logger
+from EDITTHIS.src.core.task_manager import TaskManager
+from EDITTHIS.src.core.utils import SingletonMeta
+from EDITTHIS.src.services.base_service import BaseService
 
 
 class ServiceLoader(metaclass=SingletonMeta):

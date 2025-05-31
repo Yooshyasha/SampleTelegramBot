@@ -3,19 +3,18 @@ BSD 3-Clause License
 All rights reserved."""
 
 from abc import ABC, abstractmethod
-from typing import Any
 
-from avitoworkerservice.src.core.utils import SingletonABCMeta
+from EDITTHIS.src.core.utils import SingletonABCMeta
 
 
 class BaseService(ABC, metaclass=SingletonABCMeta):
     @abstractmethod
-    def __init__(self, *args: Any, **kwargs: Any) -> None:
+    def __init__(self, *args, **kwargs) -> None:
         """Создание экземпляра сервиса."""
         raise NotImplementedError
 
     @abstractmethod
-    async def initialization(self) -> Any:
+    async def initialization(self):
         """
         Инициализирует сервис
         :return: None
@@ -23,7 +22,7 @@ class BaseService(ABC, metaclass=SingletonABCMeta):
         raise NotImplementedError
 
     @abstractmethod
-    async def destroy(self) -> Any:
+    async def destroy(self):
         """
         Уничтожает сервис
         :return: None
